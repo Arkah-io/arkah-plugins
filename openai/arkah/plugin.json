@@ -1,0 +1,34 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "arkah",
+  "version": "0.1.0",
+  "description": "Visualize and challenge your ideas. Read private boards or build from a reviewed brief.",
+  "license": "MIT",
+  "author": { "name": "Arkah", "url": "https://arkah.io" },
+  "homepage": "https://arkah.io/integrations",
+  "repository": "https://github.com/Arkah-io/arkah-plugins",
+  "keywords": ["boards", "research", "visualization"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Arkah",
+        "shortDescription": "Visualize & challenge ideas",
+        "longDescription": "Visualize and challenge your ideas. Find and read your owned Arkah boards, review a brief, and create a new board from your conversation. Explore a private, read-only Canvas/Reader preview in compatible hosts. Existing-board editing and publishing remain in Arkah.",
+        "developerName": "Arkah",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write", "Interactive"],
+        "websiteURL": "https://arkah.io",
+        "supportURL": "https://arkah.io/integrations#support",
+        "privacyPolicyURL": "https://arkah.io/privacy",
+        "termsOfServiceURL": "https://arkah.io/terms",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png",
+        "defaultPrompt": [
+          "Find my recent Arkah boards.",
+          "Read my launch planning board.",
+          "Help me prepare a brief for a new board."
+        ]
+      }
+    }
+  }
+}

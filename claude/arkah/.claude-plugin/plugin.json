@@ -1,0 +1,11 @@
+{
+  "name": "arkah",
+  "version": "0.1.0",
+  "description": "Visualize and challenge your ideas. Read private boards or build from a reviewed brief.",
+  "license": "MIT",
+  "author": { "name": "Arkah", "url": "https://arkah.io" },
+  "homepage": "https://arkah.io/integrations",
+  "repository": "https://github.com/Arkah-io/arkah-plugins",
+  "keywords": ["boards", "research", "visualization"],
+  "mcpServers": "./.mcp.json"
+}
