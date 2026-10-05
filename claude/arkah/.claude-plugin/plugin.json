@@ -1,11 +1,12 @@
 {
   "name": "arkah",
-  "version": "0.1.0",
-  "description": "Visualize and challenge your ideas. Read private boards or build from a reviewed brief.",
+  "version": "0.1.1",
+  "description": "Turn chats into visual boards. Compare options and challenge your ideas.",
   "license": "MIT",
   "author": { "name": "Arkah", "url": "https://arkah.io" },
   "homepage": "https://arkah.io/integrations",
   "repository": "https://github.com/Arkah-io/arkah-plugins",
   "keywords": ["boards", "research", "visualization"],
+  "privacyPolicyUrl": "https://arkah.io/privacy",
   "mcpServers": "./.mcp.json"
 }
