@@ -1,13 +1,13 @@
 {
-  "name": "arkah",
-  "description": "Arkah assistant integrations.",
-  "owner": { "name": "Arkah" },
-  "plugins": [
-    {
-      "name": "arkah",
-      "displayName": "Arkah",
-      "source": "./claude/arkah",
-      "description": "Turn chats into visual boards. Compare options and challenge your ideas."
-    }
-  ]
+	"name": "arkah",
+	"description": "Arkah assistant integrations.",
+	"owner": { "name": "Arkah" },
+	"plugins": [
+		{
+			"name": "arkah",
+			"displayName": "Arkah",
+			"source": "./claude/arkah",
+			"description": "Turn chats into visual boards. Compare options and challenge your ideas."
+		}
+	]
 }

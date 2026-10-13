@@ -1,6 +1,6 @@
 ---
 name: arkah-boards
-description: Find and read private Arkah boards, or prepare and create a new board through Arkah's connected MCP server. Does not edit or publish existing boards.
+description: Find and read private Arkah boards, get an independent second opinion on the current conversation, or prepare and create a new board through Arkah's connected MCP server. Does not edit or publish existing boards.
 ---
 
 Use Arkah's tools for requests involving the user's Arkah boards. Do not substitute a different service or create a board merely because it might be useful.
@@ -16,5 +16,19 @@ After the user approves that exact revision, call `create_board` with its briefI
 Reuse the exact requestKey and inputs for a lost preparation response. Reuse the exact briefId and revision for a lost creation response; first check `get_generation` when its outcome is uncertain. Never change an idempotency identity just to make a failed retry succeed. An interrupted paid preparation requires an explicit new user request before starting another. Failed/cancelled builds retain their recovery link; do not automatically rebuild or spend again.
 
 Return the durable Arkah link immediately. The build continues after the chat closes. Poll `get_generation` while actively helping the user, or open `show_board`; don't promise an unsolicited host-chat completion message. Cancel only on request using `cancel_generation`; cancellation may lose a race with completion and does not undo a committed board.
+
+## Second opinions
+
+When the user asks what Arkah thinks, asks to challenge, check or stress-test the conversation, or wants a second opinion, call `review_chat`. It is billable and needs creation permission; explain an upgrade request the same way as for building. Two models from labs other than yours review the conversation independently and the result opens in the Arkah viewer.
+
+The reviewers see only what you send, so the review is only as honest as your payload:
+
+- `userQuestions`: the user's actual questions or goal, quoted verbatim where possible.
+- `claims`: the conclusions and recommendations you actually gave, one per item with short ids (`c1`, `c2`…), including the caveats you stated. Do not tidy away weak points or add claims you did not make.
+- `finalAnswerExcerpts`: exact quotes from your latest substantive answer, copied without paraphrase.
+- `userPushback`: points where the user disagreed. `keyNumbers`, `sourcesCited` and `userDecision` when they exist.
+- `assistantLab`: the lab that makes you. Use a fresh UUID `requestKey`; reuse it only to retry a lost response.
+
+Present the result without rebutting it unprompted. Point the user to the viewer, summarize where the reviewers agreed and disagreed in neutral words, and let them decide. If the user then asks you to respond to the review, answer each challenged point directly, including where you now agree. Reviews are private and cannot be shared; to share, the user can turn the review into a full board through the normal preparation flow. A failed review is not retried automatically.
 
 Do not edit/delete/publish boards, read collaborators' boards, select Projects/files, run Deep Research, or connect Arkah to outbound MCP sources: these capabilities are not exposed by this integration. Executable panels and editing open in Arkah. Disconnecting in Settings → Connected apps blocks future access but cannot erase data already returned to the host or cancel accepted builds.

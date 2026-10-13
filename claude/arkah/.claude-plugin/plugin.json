@@ -1,14 +1,14 @@
 {
-  "name": "arkah",
-  "version": "0.1.2",
-  "description": "Turn chats into visual boards. Compare options and challenge your ideas.",
-  "license": "MIT",
-  "author": { "name": "Arkah", "url": "https://arkah.io" },
-  "homepage": "https://arkah.io/integrations",
-  "repository": "https://github.com/Arkah-io/arkah-plugins",
-  "keywords": ["boards", "research", "visualization"],
-  "displayName": "Arkah",
-  "icon": "./assets/icon.png",
-  "privacyPolicyUrl": "https://arkah.io/privacy",
-  "mcpServers": "./.mcp.json"
+	"name": "arkah",
+	"version": "0.2.0",
+	"description": "Turn chats into visual boards. Compare options and challenge your ideas.",
+	"license": "MIT",
+	"author": { "name": "Arkah", "url": "https://arkah.io" },
+	"homepage": "https://arkah.io/integrations",
+	"repository": "https://github.com/Arkah-io/arkah-plugins",
+	"keywords": ["boards", "research", "visualization"],
+	"displayName": "Arkah",
+	"icon": "./assets/icon.png",
+	"privacyPolicyUrl": "https://arkah.io/privacy",
+	"mcpServers": "./.mcp.json"
 }
